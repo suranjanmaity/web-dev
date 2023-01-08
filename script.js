@@ -65,24 +65,24 @@ const pi = 3.14
 // }
 // )();
 // object
-let obj = {
-    name:"old chombi",
-    age:23,
-    gender:"male"
-}
+// let obj = {
+//     name:"old chombi",
+//     age:23,
+//     gender:"male"
+// }
 
 // object 2
-let obj2 = {
-    gender:"male",
-    age:1,
-    name:"new chombi",
-}
+// let obj2 = {
+//     gender:"male",
+//     age:1,
+//     name:"new chombi",
+// }
 
-function details(){
-    console.log(`name = ${this.name}`);
-    console.log(`age = ${this.age}`);
-    console.log(`gender = ${this.gender}`);
-}
+// function details(){
+//     console.log(`name = ${this.name}`);
+//     console.log(`age = ${this.age}`);
+//     console.log(`gender = ${this.gender}`);
+// }
 // bind function
 // let ref = details.bind(obj);
 // let ref2 = details.bind(obj2);
@@ -171,40 +171,74 @@ let user = [
 // console.log(user);
 // TODO another way
 // let new_arr = user;
+// TODO another way
+let new_arr = JSON.parse(JSON.stringify(user));
 // console.log(new_arr);
 //? 2. Print name and gender of unmarrieds.
-// user.forEach(element => {
-//     if (element.marital_status=="unmarried") {
-//         console.log(element.name);
-//         console.log(element.age);
-//     }
-// });
+new_arr = user.map(element => {
+    if (element.marital_status=="unmarried") {
+        console.log(element.name);
+        console.log(element.age);
+    }
+    return element;
+});
+//? 3. Print name and gender of marrieds whose age is less than 18.
+user.forEach(element => {
+  if (element.marital_status=="married"&&element.age<18) {
+    console.log(element.name);
+    console.log(element.gender);
+  }
+});
 
-// 3. Print name and gender of marrieds whose age is less than 18.
-// user.forEach(element => {
-//     if (element.marital_status=="married"&&element.age<18) {
-//         console.log(element.name);
-//         console.log(element.gender);
-//     }
-// });
-
-// 4. If age is less than 18 , then add property to the object – { eligible_for_marriage : “false” }.
-// user.forEach(element => {
-//     if (element.age<18) {
-//         element.eligible_for_marriage = "false";
-//     }
-// });
-// console.log(user);
+//? 4. If age is less than 18 , then add property to the object – { eligible_for_marriage : “false” }.
+new_arr = user.map(value => {
+    if (value.age<18) {
+          value.eligible_for_marriage = "false";
+    }
+  return value;
+});
 
 // 5. If age is greater than 17 , then add property to the object – { eligible_for_marriage : “true” }.
+new_arr = user.map(value=>{if (value.age>17){
+  value.eligible_for_marriage = "true";
+}
+return value;
+});
 
 
 // 6. In object , gender is mentioned as “m” and “f”  -> change “m” to “male” and change “f” to “female”.
+new_arr = user.map(element=>{
+  if (element.gender=="m") {
+    element.gender = "male"
+  }
+  if (element.gender=="f") {
+    element.gender = "female"
+  }
+  return element;
+});
+
 
 // 7. Add a function to every object such that , whenever we call the function it should print updated gender (“male” and “female”) and eligible_for_marriage and name.
+new_arr = user.map(element=>{
+  element.func = ()=>{
+    console.log(element.gender);
+    console.log(element.eligible_for_marriage);
+    console.log(element.name);
+  }
+  return element;
+});
+// new_arr[1].func();
 
 // 8. Delete object at 3rd index.
+new_arr.splice(2,1);
+console.log(new_arr);
+
 
 // 9. Update the original array with all new properties.
+user = JSON.parse(JSON.stringify(new_arr));
+console.log(user);
 
 // 10. Print the data of each object
+new_arr.map(value=>{
+  console.log(value);
+});
