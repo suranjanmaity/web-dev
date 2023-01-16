@@ -1,4 +1,4 @@
-package pattern;
+package codingQuestions.pattern;
 /**
  * print this numeric pattern
  * 0

@@ -1,4 +1,4 @@
-package array;
+package codingQuestions.array;
 // import java.util.Scanner;
 
 /**
@@ -20,7 +20,7 @@ public class arrayTranspose {
         //     }
         // }
 
-        System.out.println("input");
+        System.out.println("input 5x3");
         for(int r=0;r<5;r++){
             for(int c=0;c<3;c++){
                 System.out.print(arr[r][c]+" ");
@@ -28,13 +28,14 @@ public class arrayTranspose {
             System.out.println();
         }
 
-        System.out.println("output");
+        System.out.println("output 3X5");
         for(int c=0;c<3;c++){
             for(int r=0;r<5;r++){
                 System.out.print(arr[r][c]+" ");
             }
             System.out.println();
         }
+        
         
     }
 }
