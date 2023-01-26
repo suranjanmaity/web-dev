@@ -43,15 +43,28 @@ ul.width = "45%";
 ul.color = "white";
 ul.display = "flex";
 ul.justifyContent = "space-around";
+// ul li
 let li = document.querySelectorAll("#navbar ul li");
 li.forEach(element => {
     element.style.listStyleType = "none";
+    element.color ="white";
+
 });
-let li_hover = document.querySelectorAll("#navbar ul li:hover");
-// console.log(li_hover);
-li_hover.forEach(element => {
-    element.style.color = "green";
+
+// ul li a
+let a = document.querySelectorAll("#navbar ul li a");
+console.log(a);
+a.forEach(element => {
+    element.style.color ="white";
+    element.style.textDecoration = "none";
+    element.addEventListener("mouseover", ()=>{
+        element.style.color = "lightgreen";
+    });
+    element.addEventListener("mouseout", ()=>{
+        element.style.color = "white";
+    });
 });
+
 let table = document.createElement("table");
 body.appendChild(table);
 let tr = document.createElement("tr");
@@ -110,12 +123,12 @@ we can specify the type of event for which event handler should be called.
 * Event Performed   Event Handler   Description
 -----------------------------------------------------
 todo MOUSE EVENT
-* click             onclick         
-* mouseover         onmouseover     
-* mouseout          onmouseout      
-* mousedown         onmousedown     
-* mouseup           onmouseup       
-* mousemove         onmousemove     
+* click             onclick         when mouse is clicked over that element
+* mouseover         onmouseover     when mouse is moved comes over that element
+* mouseout          onmouseout      when mouse is moved leave that element
+* mousedown         onmousedown     when mouse key is pressed over that element
+* mouseup           onmouseup       when mouse key is released over that element
+* mousemove         onmousemove     when mouse is moved over that element
 todo KEYBOARD EVENT
 * Keydown           onkeydown       
 * Keyup             onkeyup         
