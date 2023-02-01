@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, impedit ducimus. Facere adipisci, harum ut iusto pariatur facilis! Veritatis atque error dolor nobis, pariatur rerum labore velit sunt sapiente doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam ipsa consequuntur, suscipit doloribus iusto soluta dicta rem ducimus beatae ea aliquam animi, perspiciatis maxime ut nostrum. Facilis earum perferendis voluptatibus.</p>
+    <button>remove event</button>
+    <script>
+        let p = document.querySelector("p");
+        function handelClick(e) {
+            p.style.backgroundColor = "red";
+        }
+        p.addEventListener("click", handelClick);
+        let btn = document.querySelect("button");
+        btn.addEventListener("click", e=>{
+            e.preventDefault()
+            p.removeEventListener("click", handelClick);
+        });
+    </script>
+</body>
+</html>

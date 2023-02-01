@@ -186,3 +186,5 @@ we have to add "on" before event name
 click -> onclick
 double click -> ondblclick
 */
+p.addEventListener("click", color1);
+p.addEventListener("dblclick", color1);
