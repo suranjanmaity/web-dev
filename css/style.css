@@ -118,7 +118,7 @@ button:focus {
         align-items: center;
         justify-content: space-evenly;
         height: 60vh;
-        width: 70vw;
+        width: 80vw;
         resize: none;
         overflow: auto;
     }
