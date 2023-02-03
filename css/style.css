@@ -114,10 +114,10 @@ button:focus {
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
-        height: 70vh;
-        width: 60vw;
+        height: 60vh;
+        width: 70vw;
         resize: none;
-        /* overflow: auto; */
+        overflow: auto;
     }
 }
  /* ! keyframes   */
