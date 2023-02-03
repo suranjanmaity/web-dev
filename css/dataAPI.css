@@ -1,0 +1,44 @@
+body{
+    background: linear-gradient(lightgrey,orangered,lightgrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    margin: 1rem;
+    padding: 1rem;
+    width: 70vw;
+    border-radius: 1rem;
+    background: rgba(245, 245, 245, 0.512);
+}
+article{
+    margin: 1rem;
+    padding: 0rem 1rem;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.card {
+    width: 12rem;
+    height: 15rem;
+    padding: .5rem 0;
+    border-radius: 1rem;
+    background: rgba(245, 245, 245, 0.512);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.card img{
+    height: 10rem;
+    width: 10rem;
+    padding: .2rem;
+    border-radius: 1rem;
+}
+.card a{
+    display: block;
+    text-decoration: none;
+}
