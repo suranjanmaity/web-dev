@@ -169,7 +169,7 @@ function color1() {
     document.querySelector("p").style.backgroundColor = "#1d75de";
 }
 function color2() {
-    document.querySelector("p").style.backgroundColor = "blue";
+    document.querySelector("p").style.backgroundColor = "red";
 }
 // ? 2 JS property
 /*

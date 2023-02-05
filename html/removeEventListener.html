@@ -15,9 +15,9 @@
             p.style.backgroundColor = "red";
         }
         p.addEventListener("click", handelClick);
-        let btn = document.querySelect("button");
+        let btn = document.querySelector("button");
         btn.addEventListener("click", e=>{
-            e.preventDefault()
+            // e.preventDefault();
             p.removeEventListener("click", handelClick);
         });
     </script>
