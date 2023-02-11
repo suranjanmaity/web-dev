@@ -79,6 +79,7 @@ to stop setInterval we have clearInterval() method which acepts unique id return
     setTimeout runs again and again when the timer expires
 */
 
+// * Promise
 // ? Promise
 /*
 the promise object reppresent eventual completion(or failure) of asynchronous operation and its resulting value.

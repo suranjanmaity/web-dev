@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Class</h3>
+    <ul>
+        <li>
+            class is function only
+        </li>
+        <li>
+            class is syntax sugar of function.
+        </li>
+        <li>
+            to declare a class , we have to use 'class' keyword
+        </li>
+    </ul>
+    <i>
+        ex: class humam
+        <span>
+            here, human is variable, which holds the reference of class(function)
+        </span>
+    </i>
+    <code><br>
+        class Human{ <br>
+            <b>
+                constructor function <br>
+            </b>
+            constructor(name){ <br>
+                this.name = name; <br>
+            } <br>
+            <ul>
+                <li>
+                    it is a special method
+                </li>
+                <li>
+                    which returns nothing
+                </li>
+                <li>
+                    it is called automatically, when new object is created
+                </li>
+                <li>
+                    it is used to initialize the data members of class
+                </li>
+            </ul>
+            <b>
+                private member <br>
+            </b>
+            #hello(){ <br>
+                console.log("private hello!"); <br>
+                return true; <br>
+            }; <br>
+            <ul>
+                <li>
+                    private -> we have to add '#' before member
+                </li>
+                <li>
+                    it cannot be accessed outside of class and cannot be inherited
+                </li>
+                <li>
+                    but it is not supported by all browsers
+                </li>
+            </ul>
+            <b>
+                protected member <br>
+            </b>
+            _hello(){ <br>
+                console.log("protected hello!"); <br>
+                return true; <br>
+            }; <br>
+            <ul>
+                <li>
+                    protected -> we have to add '_' before member
+                </li>
+                <li>
+                    can be accessed by child
+                </li>
+                <li>
+                    we can access from outside
+                </li>
+                <li>
+                    '_' it sis warning for developers, that you should not access of class or outside child
+                </li>
+            </ul>
+        } <br>
+        let human = new Human("chombi"); <br>
+        console.log(human); <br>
+        console.log(human._hello()); <br>
+        // console.log(human.#hello());
+        <i>
+            will give error message <br>
+        </i>
+    </code>
+    <h3>Constructor</h3>
+    <ul>
+        <li>
+            it is special method
+        </li>
+        <li>
+            which returns nothing
+        </li>
+        <li>
+            it is called automatically, when new object is created
+        </li>
+        <li>
+            it is used to initialize the data 
+        </li>
+    </ul>
+    <script src="../js/oops.js"></script>
+</body>
+</html>
