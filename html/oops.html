@@ -110,6 +110,69 @@
             it is used to initialize the data 
         </li>
     </ul>
-    <script src="../js/oops.js"></script>
+    <h4>Static data member</h4>
+    <ul>
+        <li>
+            static data members were not accessible by instance
+        </li>
+        <li>
+            because static data members are not added to prototype of class
+        </li>
+        <code> <br>
+            class NewHuman{ <br>
+                constructor(name){ <br>
+                    this.name = name; <br>
+                } <br>
+                // ! Static data member <br>
+                static speak(){ <br>
+                    console.log(this.name); <br>
+                }; <br>
+            } <br>
+            let h2 = new NewHuman("chombi"); <br>
+            console.log(h2); <br>
+            <i>// console.log(h2.speak());    // will get Uncaught TypeError: h2.speak is not a function</i> <br>
+            console.log(NewHuman.speak()); <br>
+        </code>
+        <li>
+           we can access static members with the help of class name
+        </li>
+    </ul>
+    <h3>Inheritance</h3>
+    <ul>
+        <li>we use inherit all public and protected members from parent class to child class</li>
+        <li>we have to use 'extends' keyword and we must use 'super' call statement in child constructor</li>
+        <code>
+            class NormalHuman{ <br>
+                constructor(name){ <br>
+                    this.name = name; <br>
+                } <br>
+                brain(){ <br>
+                    console.log("brain available"); <br>
+                } <br>
+                speak(){ <br>
+                    console.log("I'm human, My name is " + this.name); <br>
+                } <br>
+            } <br>
+            <b>'extends' keyword is used to inherit from all public members from parent class </b> <br>
+            class SuperHuman extends NormalHuman{ <br>
+                constructor(sname) { <br>
+                    <b>'super' keyword is used to call constructor from parent class</b> <br>
+                    super(sname); <br>
+                } <br>
+                fly(){ <br>
+                    console.log("i can fly"); <br>
+                } <br>
+                heat(){ <br>
+                    console.log("heat blast"); <br>
+                } <br>
+            } <br>
+            let superHuman = new SuperHuman("CHAMP"); <br>
+            superHuman.speak(); <br>
+            superHuman.brain(); <br>
+            superHuman.fly(); <br>
+            superHuman.heat(); <br>
+        </code>
+    </ul>
+        <script src="../js/oops.js"></script>
 </body>
 </html>
